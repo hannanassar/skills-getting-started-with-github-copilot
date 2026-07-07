@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const result = await response.json();
 
               if (response.ok) {
-                button.parentElement.remove();
+                await fetchActivities();
                 messageDiv.textContent = result.message;
                 messageDiv.className = "success";
               } else {
